@@ -22,3 +22,13 @@ Add the following line to you providers in `config/app.php`:
 Add the following line to you facades in `config/app.php`:
 
     'ES' => Orphans\ElasticSearch\Support\Facades\ElasticSearch::class,
+
+## Usage
+
+In your controllers, just include the following:
+
+    use ES;
+
+And you can then do queries as normal using the facade:
+
+    $response = ES::search($params);
