@@ -27,7 +27,8 @@ class ElasticSearchServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('elasticsearch', function($app){
-            return new ClientBuilder::create()->build();
+            $es = new ClientBuilder;
+            return $es->create()->build();
         });
     }
 }
