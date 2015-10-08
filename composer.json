@@ -1,0 +1,13 @@
+{
+    "name": "orphans/elasticsearch",
+    "description": "Provides elasticsearch Facade for Laravel 5.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Orphans\\ElasticSearch\\": "src"
+        }
+    },
+    "require": {
+        "elasticsearch/elasticsearch": "~2.0"
+    }
+}
