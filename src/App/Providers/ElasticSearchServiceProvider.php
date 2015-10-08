@@ -28,8 +28,9 @@ class ElasticSearchServiceProvider extends ServiceProvider
     {
         $this->app->singleton('elasticsearch', function($app){
             $es = new ClientBuilder;
-            $this->app->instance('elasticsearch', $es->create()->build());
-            return $es;
+            $client = $es->create()->build();
+            $this->app->instance('elasticsearch', $client);
+            return $client;
         });
     }
 }
