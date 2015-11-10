@@ -4,4 +4,4 @@ return [
 	'hosts' => [
 		'localhost'
 	]
-]
+];
