@@ -25,6 +25,10 @@ Add the following line to you facades in `config/app.php`:
 
 ## Usage
 
+To customise your elasticsearch config, publish the package config to your config folder:
+
+    php artisan vendor:publish
+
 In your controllers, just include the following:
 
     use ES;
