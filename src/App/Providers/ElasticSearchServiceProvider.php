@@ -10,13 +10,15 @@ use Elasticsearch\ClientBuilder;
 class ElasticSearchServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
+     * Bootstrap the application services.
      *
      * @return void
      */
     public function boot()
     {
-        //
+        $source = realpath(__DIR__.'/../../../config/elasticsearch.php');
+        $this->publishes([$source => config_path('elasticsearch.php')]);
+        $this->mergeConfigFrom($source, 'elasticsearch');
     }
 
     /**
